@@ -21,28 +21,29 @@ def longest_game(file):
 print(longest_game("hada.txt"))
 
 def copy(file):
-    shutil.copyfile(file, "hada_new.txt")
 
-copy("hada_new.txt")
+    shutil.copyfile(file, "hada2.txt")
 
-# def zip(file):
-#     hada_file = open(file, 'r')
-#     hada_read = hada_file.read()
-#     zipp = ''
-#     counteragain = {}
-#     hada_read2 = hada_read.replace('\n', '')
-#     for x in hada_read2:
-#         if x in counteragain:
-#             counteragain[x] = counteragain + 1
-#         else:
-#             counteragain[x] = 1
-#     for y in counteragain:
-#         if counteragain[y] > 1:
-#             zipp += y + ' ' + str(counteragain[y])+ ' '
-#             with open('hada2.txt', "w") as snake2:
-#                 snake2.write(zipp)
-#
-#     print(zip('hada.txt'))
+copy("hada.txt")
+
+def zip(file):
+    hada_file = open(file, 'r')
+    hada_read = hada_file.read()
+    zipp = ''
+    counteragain = {}
+    hada_read2 = hada_read.replace('\n', '')
+    for x in hada_read2:
+        if x in counteragain:
+            counteragain[x] = counteragain[x] + 1
+        else:
+            counteragain[x] = 1
+    for y in counteragain:
+        if counteragain[y] > 1:
+            zipp += y + ' ' + str(counteragain[y])+ ' '
+            with open('hada2.txt', "w") as snake2:
+                snake2.write(zipp)
+
+print(zip('hada.txt'))
 
 
 
